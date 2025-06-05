@@ -58,4 +58,21 @@ btnCerrar.addEventListener("click", ()=>{
 //Agregar nuevo integrante desde el formulario
 document.getElementById("frmAgregar").addEventListener("submit", async e => {
     e.preventDefault(); //"e" representa a "submit". Evita que el formulario se envíe de un solo.
+
+    //Capturar los valors del formulario
+    const nombre = document.getElementById("txtNombre").value.trim();
+    const apellido = document.getElementById("txtApellido").value.trim();
+    const correo = document.getElementById("txtEmail").value.trim();
+
+    //Validación básica
+    if(!nombre || !apellido || !correo){
+        alert("Ingrese los valores correctamente");
+        return; //Para evitar que el código se siga ejecutando
+    }
+
+    //Llamar a la API para enviar el registro
+    const respuesta = await fetch(API_URL, {
+        method: "POST",
+        
+    });
 });
