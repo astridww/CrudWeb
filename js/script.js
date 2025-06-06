@@ -90,4 +90,7 @@ document.getElementById("frmAgregar").addEventListener("submit", async e => {
         //Recargar la tabla
         ObtenerIntegrantes();
     }
+    else{
+        alert("El registro no pudo ser agregado.");
+    }
 });
